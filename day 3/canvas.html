@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas</title>
+</head>
+
+<body>
+
+    <canvas width="640" height="480" id="my_canvas">
+
+
+    </canvas>
+    <script>
+        let canvas = document.getElementById("my_canvas")
+        let context = canvas.getContext("2d");
+
+        const speed = 4;
+        let position = 0;
+        let moveSpeed = speed;
+        let radius = 40;
+        function moveBall() {
+            if (position + radius > 640) {
+                moveSpeed = -speed;
+
+            }
+            else if (position - radius < 0) {
+                moveSpeed = speed;
+            }
+            position += speed;
+        }
+        function drawBall(){
+            context.clearRect(0,0,640,480);
+            context.fillStyle="#62687f";
+            context.beginPath();
+            context.arc(position,50,radius,0,2* Math.PI)
+            context.fill();
+        }
+
+            function animate(){
+                moveBall();
+                drawBall();
+                window.requestAnimationFrame(animate)
+            }
+        window.requestAnimationFrame(animate)
+    </script>
+</body>
+
+</html>

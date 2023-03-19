@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Stats preview card component</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+  }
+
+  .bodytext {
+    color: hsla(0, 0%, 100%, 0.75);
+
+  }
+
+  .headerText p{
+   
+    font-family: 'Inter', sans-serif;}
+  .colors {
+    color: hsla(0, 0%, 100%, 0.6);
+  }
+
+  body {
+    margin: 8%;
+    background-color: hsl(233, 47%, 7%);
+  }
+
+  .txtHead {
+    color: hsl(0, 0%, 100%);
+    font-size: 15px;
+  }
+
+  .allClass {
+    border-radius: 10px;
+    height: 410px;
+    background-color: hsl(244, 38%, 16%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .textClass {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex: 1;
+  }
+
+  .headerText {
+    padding: 16px 97px 34px;
+    margin-top: 30px;
+  }
+
+  .headerText,
+  .pClass {
+    font-size: 40px;
+    width: 100%;
+    color: hsl(0, 0%, 100%);
+  }
+
+  .bottomText {
+    width: 100%;
+    padding-left: 8px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .oneWord {
+    display: inline;
+    color: hsl(277, 64%, 61%);
+  }
+
+  .dimag {
+    flex: 1;
+    color: red;
+    opacity: 0.4;
+  }
+
+  .dimag {
+    width: 100%;
+    background-image: url('images/image-header-desktop.jpg');
+    background-size: cover;
+    height: 100%;
+  }
+
+  .imgColor {
+    background-color: hsl(277, 85%, 69%,);
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .pClass {
+    flex: 0;
+    padding: 0 117px 9px 91px;
+  }
+
+  .dataItem {
+    padding: 25px 95px;
+    flex: 0;
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    align-items: center;
+  }
+
+  .item {
+    margin-right: 4/2px;
+  }
+</style>
+
+<body>
+  <div class="allClass">
+    <div class="textClass">
+      <div class="headerText">
+       <p> Get <span class="oneWord">insights</span> that help your business grow.</p>
+      </div>
+      <div class="pClass">
+        <p class="bottomText bodytext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam facere aperiam eum
+          labore,
+          quo
+          reprehenderit a vitae.</p>
+      </div>
+      <div class="dataItem">
+        <div class="item">
+          <div class="itemtext1">
+            <p class="t">10k+</p>
+          </div>
+          <div class="itemtext2 ">
+            <p class="colors">COMPANIES</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="itemtext1">
+            <p class="t">314</p>
+          </div>
+          <div class="itemtext2 ">
+            <p class="colors">TEMPLATES</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="itemtext1">
+            <p class="t">12M+</p>
+          </div>
+          <div class="itemtext2 ">
+            <p class="colors">QUERIES</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="dimag">
+      <div class="imgColor"></div>
+    </div>
+  </div>
+</body>
+
+</html>

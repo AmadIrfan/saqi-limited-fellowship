@@ -1,0 +1,10 @@
+.btn-w {
+  width: 10%;
+  background-color: red;
+} 
+.btn-w:hover{
+    background-color: gray;
+}
+.cont{
+    color: white;
+}
