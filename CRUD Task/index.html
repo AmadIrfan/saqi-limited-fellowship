@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <style>
+        .headf
+        {
+            color: #0B2447;
+        }
+        .input-group {
+            margin-top: 90px;
+        }
+
+        .textbox {
+            margin-left: 600px;
+            width: 30%;
+        }
+
+        .parentList {
+            margin-top: 40px;
+        }
+
+        .mb-3 {
+            width: 35%;
+        }
+    </style>
+</head>
+
+<body style="background-color: #F4EEE0;">
+    <div class="headf container text-center">
+        <h1>Welcome To CRUD application</h1>
+    </div>
+    <div class="input-group">
+        <input type="text-bold" class="textbox">
+        <button type="button" id="btnadd" class="btn btn-primary">Add Items</button>
+    </div>
+    <div class="container text-center mb-3">
+        <ul class="list-group parentList">
+
+        </ul>
+    </div>
+
+    <script>
+        let btn_add = document.getElementById('btnadd');
+        let parentList = document.querySelector('.parentList');
+        let inputText = document.querySelector('.textbox');
+        let editIndex = -1;
+
+        btn_add.addEventListener('click', addItem);
+        parentList.addEventListener('click', function (e)
+        {
+            if (e.target.classList.contains('delete-item'))
+            {
+                deleteItem(e.target.dataset.id);
+            }
+        });
+
+        function addItem(e)
+        {
+            if (inputText.value.trim() !== '')
+            {
+                if (editIndex === -1)
+                {
+                    let newli = document.createElement('li');
+                    newli.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
+
+                    let span = document.createElement('span');
+                    span.classList.add('item-text');
+                    span.innerText = inputText.value;
+                    newli.appendChild(span);
+
+                    let div = document.createElement('div');
+                    div.innerHTML = '<button type="button" class="btn btn-danger delete-item" data-id="' + parentList.children.length + '">Remove Item</button>';
+
+                    newli.appendChild(div);
+                    parentList.appendChild(newli);
+                } else
+                {
+                    let item = parentList.querySelector('.edit-item[data-id="' + editIndex + '"]');
+                    item.parentElement.querySelector('.item-text').innerText = inputText.value;
+                    editIndex = -1;
+                    inputText.value = '';
+                    btn_add.innerText = 'Add Items';
+                }
+            }
+        }
+
+        function deleteItem(id)
+        {
+            let item = parentList.querySelector('.delete-item[data-id="' + id + '"]').parentElement.parentElement;
+            item.remove();
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min
+
+</body>
+
+</html>
