@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1 class="name1">AmadIrfan</h1>
+        <h1 class="name2">Amad Irfan 2</h1>
+
+        <ul id="ul">
+            <li><a href="www.google.com">item1</a></li>
+            <li>item2</li>
+            <li>item3</li>
+            <li>item4</li>
+            <li><a href="www.google.com" target="_blank">item5</a></li>
+        </ul>
+        <button id="btn">Press</button>
+
+    </body>
+    <!-- <script src="js/jquery-3.6.4.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script>
+        //  console.log($)
+        $(document).ready(function () {
+            //  console.log('using J Query')
+            // getting text of button
+            // 'AmadIrfan Press'
+            // var text = $('button').text();
+            //  console.log(text)
+            // $('button#btn').dblclick(function () {
+            //     console.log('dbl click');
+            // });
+            // $('*').css('color', 'green');
+            // $('H1.name1').click(function () {
+            //     $('H1.name2').hide();
+            // });
+            // $('H1').fadeIn(32);
+            $('button#btn').on(
+                {
+                    dblclick: function () {
+                        console.log('me dbl click Button');
+                    },
+                    click: function () {
+                        console.log('me click Button');
+                        // $(".name2").fadeOut("slow");
+                        // $(".name2").fadeOut(3000);
+                        // $('button#btn').css('background', 'red');
+                        // $('H1').css('color', 'green').css('font-size', 50).fadeIn('slow');
+                        // console.log($('H1'));
+                        // $('H1.name2').show();
+                        // $(".name2").fadeIn("slow");
+                        // $(".name2").fadeIn(3000);
+                        // $(".name2").fadeToggle();
+                        // $(".name2").fadeToggle("slow");
+                        // $(".name2").fadeToggle(3000);
+                        // $(".name2").fadeTo("slow", 0.15);
+                        // $(".name2").fadeTo("slow", 0.4);
+                        // $(".name2").fadeTo("slow", 0.7);
+                    },
+                    // mouseenter: function () {
+                    //     console.log('me hover Button');
+                    // },
+                    // mouseleave: function () {
+                    //     console.log('me hover leaves Button');
+                    // }
+                });
+            // $('#ul > li').find('a').css('color','black');
+            $('#ul > li').children('a').css('color', 'red');
+            $('body').children('button').css('color', 'red');
+            // $('a[target="_blank"]').css('color','green');
+            // $('a[target!="_blank"]').css('color','black');
+
+
+        });
+    </script>
+
+</html>

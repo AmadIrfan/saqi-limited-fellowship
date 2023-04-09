@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JQuery</title>
+    </head>
+
+    <body>
+        <h1 id="AID">Amad Irfan1</h1>
+        <h1 class="CID">Amad Irfan2</h1>
+        <h1 class="CID">Amad Irfan3</h1>
+        <h1 class="oid">Amad Irfan6</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum maxime cum ut laboriosam accusamus
+            consequatur.
+        </p>
+        <button id="btnPress">press</button>
+    </body>
+    <!-- downloaded J Query used -->
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <!-- JQuery CDN -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script> -->
+    <script src="js/myJQurey.js">
+        $(document).ready(function () {
+            //JQuery Code is here
+            console.log("We are using JQuery");
+            // to Print jQuery
+            console.log($);
+            console.log(jQuery);
+
+            // $('selector').action()
+            // $('h1').click(function () {
+            //     console.log('AmadIrfan');
+            //     $(this).hide();
+            // })
+
+            //Select as Id
+            // $('#AID').click(function () {
+            //     console.log('AID', this);
+            //     $(this).hide();
+            // })
+
+            //Select as class
+            // $('.CID').click(function () {
+            //     console.log('CID', this)
+            //     $(this).hide();
+            // })
+            //Select all
+            // $('*').click(function () {
+            //     console.log('CID', this)
+            //    $(this).hide();
+            // })
+            //Select on class
+            // $('h1.oid').click(function () {
+            //     console.log('oid', this)
+            //    $(this).hide();
+            // })
+
+            //Select on first element
+            //   $("h1:first").click(function () {
+            //       console.log("first", this);
+            //       $(this).hide();
+            //   });
+            //Events in JQuery
+            // $("#btnPress").dblclick(function () {
+            //     alert("Handler for .dblclick() called.");
+            // });
+
+            // $("#btnPress").click(function () {
+            //     alert("Handler for .dblclick() called.");
+            // });
+
+
+            // //new
+            // $("h1:first").hover(function () {
+            //     console.log(this);
+            // });
+            // //new
+            // $("p").on('click', function () {
+            //     console.log('Paragraph is', this);
+            // });
+            // // new
+            // $("#btnPress").dblclick(function () {
+            //     alert("Handler for .dblclick() called.");
+            // });
+
+            // $('p').click(function () {
+            //     console.log('Paragraph is', this);
+            // });
+
+        }); 
+        console.log('Button')
+        $('button').text('AmadIrfan')
+    </script>
+
+</html>
